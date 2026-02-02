@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --pink: #F7C2FF;
+  --pink-hover: #FFD4FF;
+  --blue: #5C67FF;
+  --blue-hover: #6E78FF;
+  --bg-default: #0A0A0F;
+  --bg-paper: #12121A;
+  --bg-elevated: #1A1A24;
+  --bg-card: #16161F;
+  --text-primary: #F4F4F5;
+  --text-secondary: #9CA3AF;
+  --border-color: #2A2A35;
+  --border-subtle: #1F1F28;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #F4F4F5;
+  background: #0A0A0F;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-jetbrains-mono), 'JetBrains Mono', monospace;
+}
+
+::selection {
+  background: rgba(92, 103, 255, 0.3);
+  color: #F4F4F5;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #12121A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2A35;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}
+
+/* Code syntax highlighting */
+.code-keyword { color: #C792EA; }
+.code-string { color: #C3E88D; }
+.code-function { color: #82AAFF; }
+.code-property { color: #F07178; }
+
+/* Custom animations */
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 2s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease forwards;
+}
+
+.animate-hero-fade-in {
+  animation: hero-fade-in 0.8s ease-out both;
+}
+
+/* Gradient animation */
+@keyframes gradient {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Form focus glow */
+.focus-glow:focus {
+  box-shadow: 0 0 0 4px rgba(92, 103, 255, 0.1);
+}
